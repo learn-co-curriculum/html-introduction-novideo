@@ -15,6 +15,179 @@ file? We're going to explore how these things differ in this README.
 5. Recognize the difference between source text and text as viewed in a browser
 
 
+## Define what a file is
+
+While you may have used these computers for years, you might not have ever
+considered what a "file" is. You've certainly downloaded them, saved them,
+deleted them.  In the earliest days of computing, the ancestors of modern
+computers recognized two primary types of files: plain text files and binary
+files. This primary distinction has come to us in our current day.
+
+**Plain text** (or, "plaintext") files are designed for _humans_ to read and write
+with editors like LearnIDE, Atom, Sublime Text, vim, or emacs (notably, not
+Microsoft Word or TextEdit - more on those in a moment!).
+
+**Binary** files are designed for _computers_ to read and run (or "execute"). These
+are instructions, written in binary (the format computers think in) that
+describe how to do something. In general if the computer is doing something
+very computer-y (turning a file into music, turning a file into a movie,
+turning a file into a game) it's going to be a _binary file_. Every video game
+every DVD is effectively _one large file_ written on a disc (or downloaded)
+that a player plays back. Think of it! A Playstation of an Xbox is what it is
+simply because it knows how to turn a special file of binary data into a game.
+It's a plain ol' computer with just a _little_ extra knowledge.
+
+Word processing programs (Microsoft Word, on your computer, for example),
+provide a confusing case. While you're _seeming_ to edit text, Word stores your
+text _as well as information_ about how to undo 2 changes, which words are
+bolded, what lines are bullet lists, etc. A "word doc" file is _actually_
+a binary file.
+
+Many file types have an "extension" that comes after a `.` which suggests what
+type of program works with the file or what kind of data lie inside. For
+example "LetterToGrandma.doc" is a *doc*. The file "LetterToGrandma.txt" is a
+*txt* file. The "CarletonDance.gif" suggests an image, possibly animated.
+
+Here's a table to help train your instincts in seeing text- files versus
+binary-files:
+
+|File | Plaintext or Binary | Use |
+|-----|---------------------|-----|
+| `beethoven_09_01_chorale.mp3` | Binary | Music |
+| `CarletonDance.gif` | Binary | Image |
+| `fibonacci_printer.py` | Plaintext | A Python program written in text; executable by the `python` _binary_ file |
+| `index.html` | Plaintext | An HTML File |
+| `LetterToGrandma.doc` | Binary | A binary file for Microsoft Word |
+| `minaswan.rb` | Plaintext | A Ruby program file written in text; executable by the `ruby` _binary_ file |
+| `cannonball.mov` | Binary | A Quicktime movie showing someone jumping into a swimming pool|
+
+## Recognize plain text versus markup text
+
+You might be thinking that plaintext file seem pretty, well, boring. Games,
+movies, music, a picture of a rabbit stealing cookies from a plate, all of
+those are binary files.
+
+What good are "plain text" files? Well, every email you've ever received is a
+text file. Every web page you've ever viewed is a text file. Every journal
+you've read to do a research paper was (likely) a text file. Think momentarily
+of the ancient computers of the 1960's. A professor might key in the grades for
+their students in a text file and then use a program to calculate the averages
+and grades. An astronomer might key in historical notes on star positions and
+calculate the angle for a telescope that might point to some amazing phenomenon
+that happened billions of years ago. Text quite often gains exponential power
+when it is "processed" in some way.
+
+Let's consider what happens if text is _not_ processed at all. Looking at the
+document `dj_set.html`:
+
+```text
+* "Love Will Tear Us Apart "
+* "Everybody Knows"
+* "Somewhere on the Moon"
+* "Fast Car"
+* "Girlfriend In a Coma"
+```
+
+If we view this in our web server we see....exactly what we put in. But these
+songs all have a theme. I'd like to put a heading on top "Quiet Late-Night"
+music.
+
+```text
+"Quiet Late-Night"
+* "Love Will Tear Us Apart "
+* "Everybody Knows"
+* "Somewhere on the Moon"
+* "Fast Car"
+* "Girlfriend In a Coma"
+```
+
+Well, that doesn't display _quite_ right, I really want to see my header
+more...header-like. Let's add some extra blank lines.
+
+```text
+"Quiet Late-Night"
+
+
+* "Love Will Tear Us Apart "
+* "Everybody Knows"
+* "Somewhere on the Moon"
+* "Fast Car"
+* "Girlfriend In a Coma"
+```
+
+What happened? Are you surprised by this? Ask a friend or a guide and explain
+your theory about why nothing changed. Maybe discuss it with a friend.
+
+You see, as a human, you recognize the convention that "vertical space" between
+a collection of words at the top of a document (or plaintext file) _means_
+something like "a heading." Years of social conditioning have taught you this:
+grocery lists, train time tables, picture books you saw in kindergarten,
+graffitti wall art, most movie introductions, etc. _But a computer doesn't know
+anything about these rules!_ It never lived a human life such that it could
+learn these rules. Therefore we have to tell the displaying program (the
+browser) what these bits of text _mean_ so that it knows how to treat them.
+
+We'll fill out the text a bit more:
+
+```text
+"Quiet Late-Night"
+
+British post-punk, American folk, and some Americana for help when writing
+curriculum late at night.
+
+
+* "Love Will Tear Us Apart"
+* "Everybody Knows"
+* "Somewhere on the Moon"
+* "Fast Car"
+* "Girlfriend In a Coma"
+```
+
+With our _human_ intelligence we see a "heading" a "paragraph" and an
+"unordered ('bullet') list." Let's tell the browser to treat these bits of
+content as such.
+
+```html
+<h1>"Quiet Late-Night"</h1>
+
+<p>British post-punk, American folk, and some Americana for help when writing
+curriculum late at night.</p>
+
+<ul>
+  <li>"Love Will Tear Us Apart"</li>
+  <li>"Everybody Knows"</li>
+  <li>"Somewhere on the Moon"</li>
+  <li>"Fast Car"</li>
+  <li>"Girlfriend In a Coma"</li>
+</ul>
+```
+
+Now when the browser sees a plaintext file, with an HTML extension it will
+apply "display rules" or "rendering rules" and, instead of showing the `<p>`
+_markup_ will use that information to start tracking that the _content_  that
+should be shown as a **p**aragraph between the `<p>` and `</p>` markup. These
+angle-bracket bits of text are known as "tags." Experienced HTML writers would
+say that "the content of the paragraph is defined between the opening (`<p>`)
+and closing (`</p>`) p-tags."
+
+This is, essentially, the work of learning to write HTML. You will grow more
+familiar with tags, what they do, and how they display in a browser.
+Nevertheless the essential lesson of HTML is this:
+
+1. You edit a plaintext file
+2. You add _content_
+3. You add _markup_ around that _content_ to tell browsers _how_ to display the
+   content
+4. Browsers do the rest!
+
+It's worth celebrating. Every web page: Netflix, Facebook, Twitter, Google, The
+NRC Handelsblad, Le Monde &mdash; _every single one uses the standard that
+**you** just worked with to inform and change lives every day_. Welcome to the
+club!
+
+## Label primary components of a HyperText Markup Language (HTML) text file
+## Discern between material that describes _markup_ versus _content_
+## Recognize the difference between source text and text as viewed in a browser
 
 ## Conclusion
 
