@@ -12,7 +12,9 @@ file? We're going to explore how these things differ in this README.
 2. Recognize plain text versus markup text
 3. Label primary components of a HyperText Markup Language (HTML) text file
 4. Discern between material that describes _markup_ versus _content_
-4. Recognize the difference between source text and text as viewed in a browser
+5. Recognize the difference between source text and text as viewed in a browser
+
+
 
 ## Conclusion
 
