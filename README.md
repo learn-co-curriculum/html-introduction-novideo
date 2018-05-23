@@ -8,9 +8,11 @@ file? We're going to explore how these things differ in this README.
 
 ## Objectives
 
-1. Explain what HTML is and why it's important in the context of web development
-2. Read a basic HTML document
-3. Write basic HTML tags
+1. Define what a file is
+2. Recognize plain text versus markup text
+3. Label primary components of a HyperText Markup Language (HTML) text file
+4. Discern between material that describes _markup_ versus _content_
+4. Recognize the difference between source text and text as viewed in a browser
 
 ## Lesson
 
