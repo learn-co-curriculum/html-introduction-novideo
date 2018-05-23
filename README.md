@@ -14,6 +14,24 @@ file? We're going to explore how these things differ in this README.
 4. Discern between material that describes _markup_ versus _content_
 4. Recognize the difference between source text and text as viewed in a browser
 
+## Conclusion
+
+In this lesson we saw that by editing a plain text file and by filling it with
+special "markup" characters we can provide HTML (Remember that the "M" is for
+"markup") reading programs ("browsers") _content_ for display _as well ass_
+instructions on _how_ to show the _content_. We saw that the primary components
+of an HTML file are the `<header>` and the `<body>` and that the `<body>` is
+usually full of tags that help the readability of the document. HTML documents,
+when rendered by browsers provide a richer display than a plain text document
+could provide.
+
+In future lessons, we'll learn more about how HTML provides the ability to
+shape the presentation of your content in ever more engaging and fun ways. You
+might be starting with paragraphs today, but soon you'll be including video,
+inserting opinions multi-column layouts, and making sure the site works equally
+well on a web-enabled refrigerator as well as smartphone.
+
+
 ## Lesson
 
 ### Integrating Review
