@@ -8,58 +8,9 @@ file? We're going to explore how these things differ in this README.
 
 ## Objectives
 
-1. Define what a file is
-2. Recognize plain text versus markup text
-3. Label primary components of a HyperText Markup Language (HTML) text file
-4. Discern between material that describes _markup_ versus _content_
-5. Recognize the difference between source text and text as viewed in a browser
-
-
-## Define what a file is
-
-While you may have used these computers for years, you might not have ever
-considered what a "file" is. You've certainly downloaded them, saved them,
-deleted them.  In the earliest days of computing, the ancestors of modern
-computers recognized two primary types of files: plain text files and binary
-files. This primary distinction has come to us in our current day.
-
-**Plain text** (or, "plaintext") files are designed for _humans_ to read and write
-with editors like LearnIDE, Atom, Sublime Text, vim, or emacs (notably, not
-Microsoft Word or TextEdit - more on those in a moment!).
-
-**Binary** files are designed for _computers_ to read and run (or "execute"). These
-are instructions, written in binary (the format computers think in) that
-describe how to do something. In general if the computer is doing something
-very computer-y (turning a file into music, turning a file into a movie,
-turning a file into a game) it's going to be a _binary file_. Every video game
-every DVD is effectively _one large file_ written on a disc (or downloaded)
-that a player plays back. Think of it! A Playstation of an Xbox is what it is
-simply because it knows how to turn a special file of binary data into a game.
-It's a plain ol' computer with just a _little_ extra knowledge.
-
-Word processing programs (Microsoft Word, on your computer, for example),
-provide a confusing case. While you're _seeming_ to edit text, Word stores your
-text _as well as information_ about how to undo 2 changes, which words are
-bolded, what lines are bullet lists, etc. A "word doc" file is _actually_
-a binary file.
-
-Many file types have an "extension" that comes after a `.` which suggests what
-type of program works with the file or what kind of data lie inside. For
-example "LetterToGrandma.doc" is a *doc*. The file "LetterToGrandma.txt" is a
-*txt* file. The "CarletonDance.gif" suggests an image, possibly animated.
-
-Here's a table to help train your instincts in seeing text- files versus
-binary-files:
-
-|File | Plaintext or Binary | Use |
-|-----|---------------------|-----|
-| `beethoven_09_01_chorale.mp3` | Binary | Music |
-| `CarletonDance.gif` | Binary | Image |
-| `fibonacci_printer.py` | Plaintext | A Python program written in text; executable by the `python` _binary_ file |
-| `index.html` | Plaintext | An HTML File |
-| `LetterToGrandma.doc` | Binary | A binary file for Microsoft Word |
-| `minaswan.rb` | Plaintext | A Ruby program file written in text; executable by the `ruby` _binary_ file |
-| `cannonball.mov` | Binary | A Quicktime movie showing someone jumping into a swimming pool|
+1. Label primary components of a HyperText Markup Language (HTML) text file
+2. Discern between material that describes _markup_ versus _content_
+3. Recognize the difference between source text and text as viewed in a browser
 
 ## Recognize plain text versus markup text
 
