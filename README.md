@@ -1,10 +1,12 @@
-# TODO: Add descriptive and succinct title
+# 
 
 ## Problem Statement
 
-How do we go about writing text that is designed for viewing on the web? And
-how does that differ from the text that one might write into a plain old text
-file? We're going to explore how these things differ in this README.
+So far we've been introduced to a lot of vocabulary and have had an
+"experience" writing HTML and thinking deeply about what creates meaning. In
+this next lesson we're going to reconsider the material from the previous labs
+in an "integrating" approach: we're going to be a bit more precise with our
+language and try to "formalize" what you've experienced.
 
 ## Objectives
 
@@ -12,176 +14,19 @@ file? We're going to explore how these things differ in this README.
 2. Discern between material that describes _markup_ versus _content_
 3. Recognize the difference between source text and text as viewed in a browser
 
-## Recognize plain text versus markup text
-
-You might be thinking that plaintext file seem pretty, well, boring. Games,
-movies, music, a picture of a rabbit stealing cookies from a plate, all of
-those are binary files.
-
-What good are "plain text" files? Well, every email you've ever received is a
-text file. Every web page you've ever viewed is a text file. Every journal
-you've read to do a research paper was (likely) a text file. Think momentarily
-of the ancient computers of the 1960's. A professor might key in the grades for
-their students in a text file and then use a program to calculate the averages
-and grades. An astronomer might key in historical notes on star positions and
-calculate the angle for a telescope that might point to some amazing phenomenon
-that happened billions of years ago. Text quite often gains exponential power
-when it is "processed" in some way.
-
-Let's consider what happens if text is _not_ processed at all. Looking at the
-document `dj_set.html`:
-
-```text
-* "Love Will Tear Us Apart "
-* "Everybody Knows"
-* "Somewhere on the Moon"
-* "Fast Car"
-* "Girlfriend In a Coma"
-```
-
-If we view this in our web server we see....exactly what we put in. But these
-songs all have a theme. I'd like to put a heading on top "Quiet Late-Night"
-music.
-
-```text
-"Quiet Late-Night"
-* "Love Will Tear Us Apart "
-* "Everybody Knows"
-* "Somewhere on the Moon"
-* "Fast Car"
-* "Girlfriend In a Coma"
-```
-
-Well, that doesn't display _quite_ right, I really want to see my header
-more...header-like. Let's add some extra blank lines.
-
-```text
-"Quiet Late-Night"
-
-
-* "Love Will Tear Us Apart "
-* "Everybody Knows"
-* "Somewhere on the Moon"
-* "Fast Car"
-* "Girlfriend In a Coma"
-```
-
-What happened? Are you surprised by this? Ask a friend or a guide and explain
-your theory about why nothing changed. Maybe discuss it with a friend.
-
-You see, as a human, you recognize the convention that "vertical space" between
-a collection of words at the top of a document (or plaintext file) _means_
-something like "a heading." Years of social conditioning have taught you this:
-grocery lists, train time tables, picture books you saw in kindergarten,
-graffitti wall art, most movie introductions, etc. _But a computer doesn't know
-anything about these rules!_ It never lived a human life such that it could
-learn these rules. Therefore we have to tell the displaying program (the
-browser) what these bits of text _mean_ so that it knows how to treat them.
-
-We'll fill out the text a bit more:
-
-```text
-"Quiet Late-Night"
-
-British post-punk, American folk, and some Americana for help when writing
-curriculum late at night.
-
-
-* "Love Will Tear Us Apart"
-* "Everybody Knows"
-* "Somewhere on the Moon"
-* "Fast Car"
-* "Girlfriend In a Coma"
-```
-
-With our _human_ intelligence we see a "heading" a "paragraph" and an
-"unordered ('bullet') list." Let's tell the browser to treat these bits of
-content as such.
-
-```html
-<h1>"Quiet Late-Night"</h1>
-
-<p>British post-punk, American folk, and some Americana for help when writing
-curriculum late at night.</p>
-
-<ul>
-  <li>"Love Will Tear Us Apart"</li>
-  <li>"Everybody Knows"</li>
-  <li>"Somewhere on the Moon"</li>
-  <li>"Fast Car"</li>
-  <li>"Girlfriend In a Coma"</li>
-</ul>
-```
-
-Now when the browser sees a plaintext file, with an HTML extension it will
-apply "display rules" or "rendering rules" and, instead of showing the `<p>`
-_markup_ will use that information to start tracking that the _content_  that
-should be shown as a **p**aragraph between the `<p>` and `</p>` markup. These
-angle-bracket bits of text are known as "tags." Experienced HTML writers would
-say that "the content of the paragraph is defined between the opening (`<p>`)
-and closing (`</p>`) p-tags."
-
-This is, essentially, the work of learning to write HTML. You will grow more
-familiar with tags, what they do, and how they display in a browser.
-Nevertheless the essential lesson of HTML is this:
-
-1. You edit a plaintext file
-2. You add _content_
-3. You add _markup_ around that _content_ to tell browsers _how_ to display the
-   content
-4. Browsers do the rest!
-
-It's worth celebrating. Every web page: Netflix, Facebook, Twitter, Google, The
-NRC Handelsblad, Le Monde &mdash; _every single one uses the standard that
-**you** just worked with to inform and change lives every day_. Welcome to the
-club!
-
-## Label primary components of a HyperText Markup Language (HTML) text file
-## Discern between material that describes _markup_ versus _content_
-## Recognize the difference between source text and text as viewed in a browser
-
-## Conclusion
-
-In this lesson we saw that by editing a plain text file and by filling it with
-special "markup" characters we can provide HTML (Remember that the "M" is for
-"markup") reading programs ("browsers") _content_ for display _as well ass_
-instructions on _how_ to show the _content_. We saw that the primary components
-of an HTML file are the `<header>` and the `<body>` and that the `<body>` is
-usually full of tags that help the readability of the document. HTML documents,
-when rendered by browsers provide a richer display than a plain text document
-could provide.
-
-In future lessons, we'll learn more about how HTML provides the ability to
-shape the presentation of your content in ever more engaging and fun ways. You
-might be starting with paragraphs today, but soon you'll be including video,
-inserting opinions multi-column layouts, and making sure the site works equally
-well on a web-enabled refrigerator as well as smartphone.
-
-
-## Lesson
-
-### Integrating Review
-
-So far we've covered many concepts in small pieces to help you focus your
-learning. This lesson reviews some previously-seen concepts, but will focus on
-_integrating_ them, not _introducing_ them.
-
 ### What is HTML?
 
-HTML, or HyperText Markup Language, is a markup language which describes the
-structure and semantic meaning of web pages. Web browsers, such as Mozilla
-Firefox, Internet Explorer, and Google Chrome interpret the HTML code and use
-it to render output. Unlike Ruby, JavaScript and other programming languages,
-markup languages like HTML don't have any logic behind them. Instead, they
-simply surround the content to convey structure and meaning.
+Every web page you've ever visited is the rendered output of HTML.
 
-Every web page you've ever visited is structured using HTML code. Being able to
-read and understand an HTML document is one of the most essential tools in a
-developer's toolbox.
+HTML, or HyperText Markup Language, is a markup language which describes the
+structure and meaning of web content. Web browsers, such as Mozilla Firefox,
+Internet Explorer, and Google Chrome interpret the HTML code and use it to
+create rendered output. Unlike Ruby, JavaScript and other programming
+languages, markup languages like HTML don't have any logic behind them.
 
 ### HTML Syntax
 
-HTML consists of different elements. Each element consists of tags, which wrap
+HTML consists of different _elements_. Each element consists of tags, which wrap
 around content. For example, say we wanted `Hello World` to appear as a
 paragraph. We could use the `p` element, which consists of an opening `p` tag
 and a closing `p` tag.
@@ -194,7 +39,7 @@ Elements, like our `p` tags above, won't be displayed in the browser. Instead,
 they affect how the content itself is displayed. Techonologists might say that
 the tags "affect how the content is rendered by the browser."
 
-We can also alter any number of attributes inside of the opening tags. For
+We can also alter any number of `attributes` inside of the opening tag. For
 example, the `a` element, which is used for links, has an `href` attribute to
 specify the destination address of the link. If we wanted to link to
 www.flatironschool.com, we could do so as follows:
@@ -207,8 +52,9 @@ This would render as:
 
 [Flatiron School](http://www.flatironschool.com)
 
-We can also nest elements inside of each other. To have a link displayed as a
-separate paragraph, we could nest an `a` element inside of a `p`.
+We can also frequently nest elements inside of each other. To have a link
+displayed as a separate paragraph, we could nest an `a` element inside of a
+`p`.
 
 ```html
 <p>This <a href="http://www.google.com">link</a> will be a part of a separate paragraph.</p>
@@ -292,10 +138,7 @@ with `h1` being the largest and `h6` being the smallest.
 ```
 
 In addition to changing how the text is displayed, search engines use headers
-to help determine what a web page is about. Remember, as Avi pointed out, when
-we provide _semantic_ markup, machines can infer the "main points" of a page. A
-well structured article will generally have its principle arguments bracketed
-by low-number header tags -- this very document does exactly that!
+to help determine what a web page is about.
 
 #### Images
 
