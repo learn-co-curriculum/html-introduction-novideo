@@ -17,7 +17,7 @@ _integrating_ them, not _introducing_ them.
 ### What is HTML?
 
 HTML, or HyperText Markup Language, is a markup language which describes the
-structure and semantic meaning of web pages. Web browsers, such as Mozilla
+structure and meaning of web pages. Web browsers, such as Mozilla
 Firefox, Internet Explorer, and Google Chrome interpret the HTML code and use
 it to render output. Unlike Ruby, JavaScript and other programming languages,
 markup languages like HTML don't have any logic behind them. Instead, they
