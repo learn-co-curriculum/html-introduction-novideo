@@ -1,33 +1,31 @@
 # HTML Basics
 
-## Objectives
+## Learning Goals
 
-1. Explain what HTML is and why it's important in the context of web development
-2. Read a basic HTML document
-3. Write basic HTML tags
+- Explain what HTML is and why it's important in the context of web development
+- Read a basic HTML document
+- Write basic HTML tags
 
-## Lesson
-
-### Integrating Review
+## Introduction
 
 So far we've covered many concepts in small pieces to help you focus your
 learning. This lesson reviews some previously-seen concepts, but will focus on
 _integrating_ them, not _introducing_ them.
 
-### What is HTML?
+## What is HTML?
 
 HTML, or HyperText Markup Language, is a markup language which describes the
-structure and meaning of web pages. Web browsers, such as Mozilla
-Firefox, Internet Explorer, and Google Chrome interpret the HTML code and use
-it to render output. Unlike Ruby, JavaScript and other programming languages,
-markup languages like HTML don't have any logic behind them. Instead, they
-simply surround the content to convey structure and meaning.
+structure and meaning of web pages. Web browsers, such as Mozilla Firefox,
+Internet Explorer, and Google Chrome interpret the HTML code and use it to
+render output. Unlike Ruby, JavaScript and other programming languages, markup
+languages like HTML don't have any logic behind them. Instead, they simply
+surround the content to convey structure and meaning.
 
 Every web page you've ever visited is structured using HTML code. Being able to
 read and understand an HTML document is one of the most essential tools in a
 developer's toolbox.
 
-### HTML Syntax
+## HTML Syntax
 
 HTML consists of different elements. Each element consists of tags, which wrap
 around content. For example, say we wanted `Hello World` to appear as a
@@ -59,10 +57,13 @@ We can also nest elements inside of each other. To have a link displayed as a
 separate paragraph, we could nest an `a` element inside of a `p`.
 
 ```html
-<p>This <a href="http://www.google.com">link</a> will be a part of a separate paragraph.</p>
+<p>
+  This <a href="http://www.google.com">link</a> will be a part of a separate
+  paragraph.
+</p>
 ```
 
-### Basic HTML Document Structure
+## Basic HTML Document Structure
 
 All HTML documents begin with a "doctype declaration" tag, which tells our web
 browser which version of HTML to use. HTML is a language that is currently
@@ -73,12 +74,11 @@ _essentially_ the same as modern HTML5 but had some tags we don't use any more
 and was lacking some tags we use often today.
 
 Since it's not wrapping any content, our doctype declaration doesn't require a
-closing tag. To use HTML5, the current up-to-date version, we can simply
-declare `<!DOCTYPE html>`.
+closing tag. To use HTML5, the current up-to-date version, we can simply declare
+`<!DOCTYPE html>`.
 
 ```html
 <!DOCTYPE html>
-
 ```
 
 Next, we add an opening and closing `html` tag. This tells the web browser to
@@ -86,10 +86,7 @@ interpret everything inside the tags as HTML code.
 
 ```html
 <!DOCTYPE html>
-<html>
-
-
-</html>
+<html></html>
 ```
 
 Every HTML page is made up of two primary sections: a `head` and a `body`. The
@@ -99,22 +96,20 @@ for the browser, while the `body` element contains the actual content.
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- metadata about the HTML document as a whole -->
+  <head>
+    <!-- metadata about the HTML document as a whole -->
+  </head>
 
-    </head>
-
-    <body>
-        <!-- content of our page will be here! -->
-
-    </body>
+  <body>
+    <!-- content of our page will be here! -->
+  </body>
 </html>
 ```
 
-#### Comments
+### Comments
 
 Let's also take a brief moment to recognize how to add comments into an HTML
-document.  These won't get rendered to the browser at all: they're just helpful
+document. These won't get rendered to the browser at all: they're just helpful
 notes for the author.
 
 ```html
@@ -122,12 +117,12 @@ notes for the author.
 <p>Top 5 Pizza Places in NYC</p>
 ```
 
-### Common HTML Elements
+## Common HTML Elements
 
 We've already looked at some common HTML elements, such as `a` and `p`. Let's
 take a look at some more HTML elements.
 
-#### Headers
+### Headers
 
 HTML gives us access to different header elements, ranging from `h1` to `h6`,
 with `h1` being the largest and `h6` being the smallest.
@@ -139,13 +134,13 @@ with `h1` being the largest and `h6` being the smallest.
 <h6>Different Breeds</h6>
 ```
 
-In addition to changing how the text is displayed, search engines use headers
-to help determine what a web page is about. Remember, as Avi pointed out, when
-we provide _semantic_ markup, machines can infer the "main points" of a page. A
-well structured article will generally have its principle arguments bracketed
-by low-number header tags -- this very document does exactly that!
+In addition to changing how the text is displayed, search engines use headers to
+help determine what a web page is about. Remember, as Avi pointed out, when we
+provide _semantic_ markup, machines can infer the "main points" of a page. A
+well structured article will generally have its principle arguments bracketed by
+low-number header tags -- this very document does exactly that!
 
-#### Images
+### Images
 
 We can embed images on our web pages using the `img` element. The `img` element
 doesn't have a closing tag. The `src` attribute tells the browser where to find
@@ -163,7 +158,7 @@ the `alt` tag as well.
 
 `<img src="URL_TO_IMAGE" alt="Picture of a Dog">`
 
-#### Lists
+### Lists
 
 Some other useful HTML elements are lists. We can make bulleted, or unordered
 lists, using opening and closing `ul` tags. Inside, we can nest an `li`, or
@@ -172,15 +167,15 @@ lists, using opening and closing `ul` tags. Inside, we can nest an `li`, or
 ```html
 <h5>My Favorite Things in No Particular Order</h5>
 <ul>
-    <li>Coffee</li>
-    <li>Vinyl Records</li>
-    <li>Pickling</li>
+  <li>Coffee</li>
+  <li>Vinyl Records</li>
+  <li>Pickling</li>
 </ul>
 ```
 
 This would render as:
 
-____
+---
 
 <h5>My Favorite Things in No Particular Order</h5>
 <ul>
@@ -195,16 +190,17 @@ We can also make a numbered, or ordered list, using an `ol` tag.
 ```html
 <h5>Top 5 Pizza Places in NYC</h5>
 <ol>
-    <li>DiFara Pizza</li>
-    <li>Lucali's</li>
-    <li>Sal and Carmine's</li>
-    <li>Juliana's</li>
-    <li>Joe's</li>
+  <li>DiFara Pizza</li>
+  <li>Lucali's</li>
+  <li>Sal and Carmine's</li>
+  <li>Juliana's</li>
+  <li>Joe's</li>
 </ol>
 ```
+
 Would render as:
 
-____
+---
 
 <h5>Top 5 Pizza Places in NYC</h5>
 <ol>
